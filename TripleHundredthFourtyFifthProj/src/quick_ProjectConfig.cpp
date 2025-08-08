@@ -57,13 +57,12 @@ void ProjectConfig::resetToWelcome()
     auto path = getQuickCocos2dxRootPath();
     path.append("welcome/");
     
-    std::cout << "resetToWelcome path = " << path << std::endl;
     //path.append("quick/samples/ccsloader");
     makeNormalizePath(&path);
     setProjectDir(path);
     setWritablePath(path);
     setScriptFile(path + "src/main.lua");
-    setFrameSize(cocos2d::Size(640, 960));
+    setFrameSize(cocos2d::Size(960, 640));
     setFrameScale(1.0f);
     setPackagePath("");
     setShowConsole(false);
@@ -79,7 +78,6 @@ void ProjectConfig::resetToCreator()
     _isWelcome = true;
     auto path = getQuickCocos2dxRootPath();
     path.append("creator/");
-    std::cout << "resetToCreatorpath = " << path << std::endl;
     makeNormalizePath(&path);
     setProjectDir(path);
     setWritablePath(path);
@@ -108,8 +106,6 @@ void ProjectConfig::setProjectDir(const string &projectDir)
 
 string ProjectConfig::getScriptFile() const
 {
-    
-    std::cout << "getScriptFile path = " << _scriptFile.c_str() << std::endl;
     return _scriptFile;
 }
 
@@ -311,13 +307,12 @@ void ProjectConfig::setDebuggerType(int debuggerType)
     _debuggerType = debuggerType;
 }
 
-/*void ProjectConfig::parseCommandLine(const vector<string> &args)
+void ProjectConfig::parseCommandLine(const vector<string> &args)
 {
     auto it = args.begin();
     while (it != args.end())
     {
         string arg = *it;
-        std::cout << "ProjectConfig.parseCommandLine path = " << arg << std::endl;
         if (arg.compare("-quick") == 0)
         {
             ++it;
@@ -424,7 +419,7 @@ void ProjectConfig::setDebuggerType(int debuggerType)
         ++it;
     }
     setDebuggerType(kCCLuaDebuggerNone);
-}*/
+}
 
 // string ProjectConfig::makeCommandLine(unsigned int mask /* = kProjectConfigAll */) const
 string ProjectConfig::makeCommandLine(unsigned int mask) const
@@ -590,17 +585,10 @@ void ProjectConfig::dump()
 
 void ProjectConfig::normalize()
 {
-
-    
-    CCLOG("_projectDir %s\n",_projectDir.c_str());
-    CCLOG("_scriptFile %s\n",_scriptFile.c_str());
-    CCLOG("_writablePath %s\n",_writablePath.c_str());
-    CCLOG("_packagePath %s\n",_writablePath.c_str());
     makeNormalizePath(&_projectDir);
     makeNormalizePath(&_scriptFile);
     makeNormalizePath(&_writablePath);
     makeNormalizePath(&_packagePath);
-
     // projectDir
     size_t len = _projectDir.length();
     if (len > 0 && _projectDir[len - 1] != DIRECTORY_SEPARATOR_CHAR)
@@ -664,18 +652,12 @@ string ProjectConfig::replaceProjectDirToMacro(const string &path) const
 string ProjectConfig::replaceProjectDirToFullPath(const string &path) const
 {
     if (isAbsolutePath(path)) return path;
-
     if (path.length() == 0) return _projectDir;
-
     string result = path;
-    std::cout << "replaceProjectDirToFullPath path = " << path << std::endl;
-    std::cout << "replaceProjectDirToFullPath _projectDir = " << _projectDir << std::endl;
     if (path.compare(0, 10, "$(PROJDIR)") == 0)
     {
         result = _projectDir;
-        std::cout << "_projectDir path = " << _projectDir << std::endl;
         string suffix = path.substr(10);
-        std::cout << "suffix path = " << suffix.c_str() << std::endl;
         if (suffix[0] == DIRECTORY_SEPARATOR_CHAR)
         {
             suffix = suffix.substr(1);
@@ -699,7 +681,6 @@ void ProjectConfig::setQuickCocos2dxRootPath(const string &path)
     if (path.length())
     {
         _quickCocos2dxRootPath = path;
-        std::cout << "setQuickCocos2dxRootPath path = " << _quickCocos2dxRootPath.c_str() << std::endl;
         makeNormalizePath(&_quickCocos2dxRootPath);
         if (_quickCocos2dxRootPath[_quickCocos2dxRootPath.length() - 1] != DIRECTORY_SEPARATOR_CHAR)
         {
@@ -710,8 +691,6 @@ void ProjectConfig::setQuickCocos2dxRootPath(const string &path)
 
 string ProjectConfig::getQuickCocos2dxRootPath() const
 {
-    
-    std::cout << "getQuickCocos2dxRootPath path = " << _quickCocos2dxRootPath.c_str() << std::endl;
     return _quickCocos2dxRootPath;
 }
 
@@ -720,12 +699,8 @@ void ProjectConfig::makeNormalizePath(string *path, const char *directorySeparat
 {
     if (!directorySeparator) directorySeparator = DIRECTORY_SEPARATOR;
     size_t pos = std::string::npos;
-    std::cout << "makeNormalizePath path = " << path->c_str() << std::endl;
-    std::cout << "makeNormalizePath directorySeparator = " << directorySeparator << std::endl;
     while ((pos = path->find_first_of("/\\", pos + 1)) != std::string::npos)
     {
         path->replace(pos, 1, directorySeparator);
     }
-    
-    std::cout << "makeNormalizePath path = " << path->c_str() << std::endl;
 }

@@ -111,8 +111,6 @@ void StartupCall::startup()
     
     // set search path
     string path = FileUtils::getInstance()->fullPathForFilename(project.getScriptFileRealPath().c_str());
-    std::cout << "ScriptFileRealPath = " << project.getScriptFileRealPath().c_str() << std::endl;
-    std::cout << "startup path = " << path << std::endl;
     size_t pos;
     while ((pos = path.find_first_of("\\")) != std::string::npos)
     {

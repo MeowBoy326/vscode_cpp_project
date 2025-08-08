@@ -269,21 +269,21 @@ int PlayerWin::run()
 
 	_project.setQuickCocos2dxRootPath(removeFilename(getApplicationExePath()));
     // load project config from command line args
-    // vector<string> args;
-    // for (int i = 0; i < __argc; ++i)
-    // {
-    //     wstring ws(__wargv[i]);
-    //     string s;
-    //     s.assign(ws.begin(), ws.end());
-    //     args.push_back(s);
-    // }
-    // _project.parseCommandLine(args);
+    vector<string> args;
+    for (int i = 0; i < __argc; ++i)
+    {
+        // wstring ws(__wargv[i]);
+        // string s;
+        // s.assign(ws.begin(), ws.end());
+        string s(__argv[i]);
+        args.push_back(s);
+    }
+    _project.parseCommandLine(args);
+
     if (_project.getProjectDir().empty())
     {
         _project.resetToWelcome();
     }
-
-    printf("_project.getProjectDir() = %s\n" ,_project.getProjectDir().c_str());
 
     if (!FileUtils::getInstance()->isDirectoryExist(_project.getProjectDir() + "src/framework")) {
         FileUtils::getInstance()->addSearchPath(_project.getQuickCocos2dxRootPath());

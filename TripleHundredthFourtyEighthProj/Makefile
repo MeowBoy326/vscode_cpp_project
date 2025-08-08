@@ -20,6 +20,7 @@ LFLAGS = -lkernel32 -limm32 -lversion -luser32 -lwinspool -lodbc32 -lodbccp32 -l
 OUTPUT	:= output
 SRC		:= src 
 INCLUDE	:= include
+INCLUDE	+= res
 LIB		:= lib
 RC		:= res
 ASM		:= asm

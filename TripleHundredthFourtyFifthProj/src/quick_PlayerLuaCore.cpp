@@ -1441,7 +1441,7 @@ static int tolua_PlayerLuaCore_ProjectConfig_parseCommandLine00(lua_State* tolua
   if (!self) tolua_error(tolua_S,"invalid 'self' in function 'parseCommandLine'", NULL);
 #endif
   {
-   //self->parseCommandLine(*args);
+   self->parseCommandLine(*args);
   }
  }
  return 0;

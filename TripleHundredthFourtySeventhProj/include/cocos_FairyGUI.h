@@ -1,0 +1,33 @@
+#ifndef __FAIRYGUI_H__
+#define __FAIRYGUI_H__
+
+#include "cocos_fairyguiUIConfig.h"
+#include "cocos_fairyguiUIPackage.h"
+#include "cocos_fairyguiGImage.h"
+#include "cocos_fairyguiGMovieClip.h"
+#include "cocos_fairyguiGTextField.h"
+#include "cocos_fairyguiGRichTextField.h"
+#include "cocos_fairyguiGTextInput.h"
+#include "cocos_fairyguiGGraph.h"
+#include "cocos_fairyguiGLoader.h"
+#include "cocos_fairyguiGLoader3D.h"
+#include "cocos_fairyguiGGroup.h"
+#include "cocos_fairyguiGComponent.h"
+#include "cocos_fairyguiGLabel.h"
+#include "cocos_fairyguiGButton.h"
+#include "cocos_fairyguiGComboBox.h"
+#include "cocos_fairyguiGProgressBar.h"
+#include "cocos_fairyguiGSlider.h"
+#include "cocos_fairyguiGScrollBar.h"
+#include "cocos_fairyguiGList.h"
+#include "cocos_fairyguiGTree.h"
+#include "cocos_fairyguiGRoot.h"
+#include "cocos_fairyguiWindow.h"
+#include "cocos_fairyguiPopupMenu.h"
+#include "cocos_fairyguiUIObjectFactory.h"
+#include "cocos_fairyguiGObjectPool.h"
+#include "cocos_fairyguiDragDropManager.h"
+#include "cocos_fairyguiGTween.h"
+#include "cocos_FairyGUIMacros.h"
+
+#endif

@@ -82,7 +82,7 @@ public:
     int getDebuggerType() const;
     void setDebuggerType(int debuggerType);
 
-    //void parseCommandLine(const vector<string> &args);
+    void parseCommandLine(const vector<string> &args);
     string makeCommandLine(unsigned int mask = kProjectConfigAll) const;
 
     bool isAppMenu() const;

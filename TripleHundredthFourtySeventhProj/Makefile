@@ -8,8 +8,8 @@ CC = gcc
 WINDRES = windres
 ASMFLAGS	:=               
 RCFLAGS		:= -O coff
-CXXFLAGS	:= -std=c++14 -w -O3 -g -static -D_UNICODE -DUNICODE -D__UNICODE__ -DWIN32 -D_WIN32 -D__WIN32__ -D_WINDOWS -DWINDOWS -D__WINDOWS__ -D_GLFW_WIN32 -DNANOVG_GLEW -DGLEW_STATIC -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -DLUA_COMPAT -DLUA_COMPAT_ALL -DLUA_COMPAT_5_3 -DLUA_COMPAT_5_2  -DFT2_BUILD_LIBRARY -DFT_CONFIG_OPTION_SYSTEM_ZLIB -DBUILDING_LIBCURL -DCURL_HIDDEN_SYMBOLS -DHAVE_CURL_CONFIG_H -DCURL_STATICLIB -DSFML_STATIC -DAL_BUILD_LIBRARY -DAL_LIBTYPE_STATIC -DAL_ALEXT_PROTOTYPES -DFLAC__CPU_X86_64 -DFLAC__HAS_X86INTRIN -DFLAC__ALIGN_MALLOC_DATA -DFLAC__NO_DLL -DFLAC__OVERFLOW_DETECT -DFLAC__HAS_OGG -DFLAC__ENABLE_64_BIT_WORDS  -DLOAD_PNG -DLOAD_JPG -DLOAD_WEBP -DLOAD_GIF          
-CCFLAGS		:= -std=c11 -w -O3 -g -static -D_UNICODE -DUNICODE -D__UNICODE__ -DWIN32 -D_WIN32 -D__WIN32__ -D_WINDOWS -DWINDOWS -D__WINDOWS__ -D_GLFW_WIN32 -DNANOVG_GLEW -DGLEW_STATIC -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -DLUA_COMPAT -DLUA_COMPAT_ALL -DLUA_COMPAT_5_3 -DLUA_COMPAT_5_2  -DFT2_BUILD_LIBRARY -DFT_CONFIG_OPTION_SYSTEM_ZLIB -DBUILDING_LIBCURL -DCURL_HIDDEN_SYMBOLS -DHAVE_CURL_CONFIG_H -DCURL_STATICLIB -DSFML_STATIC -DAL_BUILD_LIBRARY -DAL_LIBTYPE_STATIC -DAL_ALEXT_PROTOTYPES -DFLAC__CPU_X86_64 -DFLAC__HAS_X86INTRIN -DFLAC__ALIGN_MALLOC_DATA -DFLAC__NO_DLL -DFLAC__OVERFLOW_DETECT -DFLAC__HAS_OGG -DFLAC__ENABLE_64_BIT_WORDS  -DLOAD_PNG -DLOAD_JPG -DLOAD_WEBP -DLOAD_GIF             
+CXXFLAGS	:= -std=c++14 -w -O3 -g -static -D_UNICODE -DUNICODE -D__UNICODE__ -DWIN32 -D_WIN32 -D__WIN32__ -D_WINDOWS -DWINDOWS -D__WINDOWS__ -D_GLFW_WIN32 -DNANOVG_GLEW -DGLEW_STATIC -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -DLUA_COMPAT -DLUA_COMPAT_ALL -DLUA_COMPAT_5_3 -DLUA_COMPAT_5_2  -DFT2_BUILD_LIBRARY -DFT_CONFIG_OPTION_SYSTEM_ZLIB -DBUILDING_LIBCURL -DCURL_HIDDEN_SYMBOLS -DHAVE_CURL_CONFIG_H -DCURL_STATICLIB -DSFML_STATIC -DAL_BUILD_LIBRARY -DAL_LIBTYPE_STATIC -DAL_ALEXT_PROTOTYPES -DFLAC__CPU_X86_64 -DFLAC__HAS_X86INTRIN -DFLAC__ALIGN_MALLOC_DATA -DFLAC__NO_DLL -DFLAC__OVERFLOW_DETECT -DFLAC__HAS_OGG -DFLAC__ENABLE_64_BIT_WORDS  -DLOAD_PNG -DLOAD_JPG -DLOAD_WEBP -DLOAD_GIF -DCC_STATIC -DHAVE_FAAD_CONFIG_H -D_USRLUASTATIC        
+CCFLAGS		:= -std=c11 -w -O3 -g -static -D_UNICODE -DUNICODE -D__UNICODE__ -DWIN32 -D_WIN32 -D__WIN32__ -D_WINDOWS -DWINDOWS -D__WINDOWS__ -D_GLFW_WIN32 -DNANOVG_GLEW -DGLEW_STATIC -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -DLUA_COMPAT -DLUA_COMPAT_ALL -DLUA_COMPAT_5_3 -DLUA_COMPAT_5_2  -DFT2_BUILD_LIBRARY -DFT_CONFIG_OPTION_SYSTEM_ZLIB -DBUILDING_LIBCURL -DCURL_HIDDEN_SYMBOLS -DHAVE_CURL_CONFIG_H -DCURL_STATICLIB -DSFML_STATIC -DAL_BUILD_LIBRARY -DAL_LIBTYPE_STATIC -DAL_ALEXT_PROTOTYPES -DFLAC__CPU_X86_64 -DFLAC__HAS_X86INTRIN -DFLAC__ALIGN_MALLOC_DATA -DFLAC__NO_DLL -DFLAC__OVERFLOW_DETECT -DFLAC__HAS_OGG -DFLAC__ENABLE_64_BIT_WORDS  -DLOAD_PNG -DLOAD_JPG -DLOAD_WEBP -DLOAD_GIF -DCC_STATIC -DHAVE_FAAD_CONFIG_H  -D_USRLUASTATIC           
 ## FLAG		:= -std=c++11 -m32 -w -O3 -g -static -fprofile-arcs -ftest-coverage -D_WIN32 -DWIN32 -D_DEBUG -DDEBUG -D_WINDOWS -DWINDOWS -D_UNICODE -DUNICODE -DNANOVG_GLEW -DGLEW_STATIC -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -DLUA_COMPAT -DLUA_COMPAT_ALL -DSK_IGNORE_ETC1_SUPPORT                   
 LFLAGS = -lkernel32 -limm32 -lversion -luser32 -lwinspool -lodbc32 -lodbccp32 -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid  -lwinmm -lmingw32 -lMsimg32 -lopengl32 -lglu32 -lgdi32 -lgdiplus -ld3d9 -ldxguid -ld3d11 -lxinput -ldinput8 -ld2d1 -ldwrite -lwindowscodecs -lshlwapi -lWs2_32 -lIphlpapi -lcomctl32 -lpthread -ldsound -lddraw -lm -lbcrypt -lsetupapi -lsecur32 -lcrypt32  -lpsapi -luserenv -ld3dcompiler -ldwmapi  -lwsock32 
 ## LFLAGS = -municode -mwindows -fexec-charset=utf-8 -finput-charset=utf-8
@@ -23,6 +23,7 @@ INCLUDE	:= include
 LIB		:= lib
 RC		:= res
 ASM		:= asm
+3RD		:= 3rd
 
 ifeq ($(OS),Windows_NT)
 MAIN	:= main.exe
@@ -31,7 +32,8 @@ INCLUDEDIRS	:= $(INCLUDE)
 LIBDIRS		:= $(LIB)
 RCDIRS		:= $(RC)
 ASMDIRS		:= $(ASM)
-FIXPATH = $(subst /,\,$1)
+3RDDIRS		:= $(3RD)
+FIXPATH = $(subst /,\\,$1)
 RM			:= del
 TARGET 		:=  /s /q /f
 MD	:= mkdir
@@ -42,14 +44,23 @@ INCLUDEDIRS	:= $(shell find $(INCLUDE) -type d)
 LIBDIRS		:= $(shell find $(LIB) -type d)
 RCDIRS		:= $(shell find $(RC) -type d)
 ASMDIRS		:= $(shell find $(ASM) -type d)
+3RDDIRS		:= $(shell find $(3RD) -type d)
 FIXPATH = $1
 RM = rm 
 TARGET 		:= -f
 MD	:= mkdir -p
 endif
 
+CURRENT := $(abspath $(lastword $(MAKEFILE_LIST)))# µ±«∞Makefile¬∑æ∂
+CURRENTPATH := $(dir $(CURRENT))# µ±«∞MakefileÀ˘‘⁄ƒø¬º
+# SUBDIRS := $(patsubst %/,%,$(dir $(3RDDIRS))) # ªÒ»°◊”ƒø¬º
 INCLUDES	:= $(patsubst %,-I%, $(INCLUDEDIRS:%/=%))
 LIBS		:= $(patsubst %,-L%, $(LIBDIRS:%/=%))
+3RDS		:= $(patsubst %/,%,$(wildcard $(3RDDIRS)/*/)) # ∂ØÃ¨ªÒ»°◊”ƒø¬º
+3RD_CLEAN_DIRS := $(foreach dir,$(3RDS),$(call FIXPATH,$(dir)))
+3RDINCLUDES		:= $(patsubst %,-I%, $(3RDS:%/=%))
+3RDLIBS_TMP		:= $(notdir $(patsubst %,%, $(3RDS:%/=%)))
+3RDLIBS		:= $(patsubst %,-l%, $(3RDLIBS_TMP:%/=%))
 ASMSOURCES		:= $(wildcard $(patsubst %,%/*.s, $(ASMDIRS)))
 ASMOBJECTS		:= $(ASMSOURCES:.s=.o)
 CXXSOURCES		:= $(wildcard $(patsubst %,%/*.cxx, $(SOURCEDIRS)))
@@ -71,36 +82,110 @@ RCDEPS		:= $(RCOBJECTS:.o=.d)
 
 OUTPUTMAIN	:= $(call FIXPATH,$(OUTPUT)/$(MAIN))
 
-all: $(OUTPUT) $(MAIN)
+
+# ∂ØÃ¨…˙≥…◊”ƒ£øÈ±‡“Îƒø±Í
+define GENERATE_3RD_TARGET
+	build_$(notdir \$1):
+	ifeq ($(OS),Windows_NT)
+		@echo ±‡“Î◊”ƒ£øÈ: $$@...
+		@start /B /WAIT $(MAKE) -C \$1
+	else
+		@echo "Compiling submodule: $$@"
+		$(MAKE) -C \$1 -j$(nproc)
+	endif
+endef
+
+all: $(OUTPUT) 3rd_build $(MAIN)
 	@echo Executing 'all' complete!
+
+# ±‡“Îµ⁄»˝∑Ωø‚
+3rd_build:
+ifeq ($(OS),Windows_NT)
+#≤¢––±‡“Î◊”ƒ£øÈ
+#$(foreach dir,$(3RDS),$(eval $(call GENERATE_3RD_TARGET,$(dir))))
+	@echo ’˝‘⁄±‡“Îµ⁄»˝∑Ωø‚...
+	@for %%d in ($(3RD_CLEAN_DIRS)) do @( \
+		if exist "%%d" ( \
+			echo Ω¯»Îƒø¬º: %%d... & \
+			$(MAKE) -C "%%d" \
+		) else ( \
+			echo Ã¯π˝≤ª¥Ê‘⁄µƒƒø¬º: %%d \
+		) \
+	)
+	@echo µ⁄»˝∑Ωø‚±‡“ÎÕÍ≥…£°
+else
+	@echo ’˝‘⁄±‡“Îµ⁄»˝∑Ωø‚...
+	@for dir in $(3RDS); do \
+		echo Ω¯»Îƒø¬º: $$dir...; \
+		$(MAKE) -C $$dir; \
+	done
+	@echo µ⁄»˝∑Ωø‚±‡“ÎÕÍ≥…£°
+endif
 
 $(OUTPUT):
 	$(MD) $(OUTPUT)
 
 $(MAIN): $(ASMOBJECTS)  $(CPPOBJECTS) $(CXXOBJECTS) $(CCOBJECTS) $(COBJECTS) $(RCOBJECTS)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(OUTPUTMAIN) $(CPPOBJECTS) $(ASMOBJECTS) $(CXXOBJECTS) $(CCOBJECTS) $(COBJECTS) $(RCOBJECTS) $(LFLAGS) $(LIBS)
+	$(CXX) -o $(OUTPUTMAIN) $(CPPOBJECTS) $(ASMOBJECTS) $(CXXOBJECTS) $(CCOBJECTS) $(COBJECTS) $(RCOBJECTS) $(LFLAGS) $(LIBS) $(3RDLIBS)
 -include   $(CPPDEPS) $(CXXDEPS) $(CCDEPS) $(CDEPS) $(RCDEPS)
 $(ASMDIRS)/%.o:$(ASMDIRS)/%.s
-	$(CXX) $(ASMFLAGS) $(INCLUDES) -c -MMD $<  -o $@
+	$(CXX) $(ASMFLAGS) $(INCLUDES) $(3RDINCLUDES) -c -MMD $<  -o $@
 $(RCDIRS)/%.o:$(RCDIRS)/%.rc
 	$(WINDRES) $(RCFLAGS) $< -o $@
 %.o:%.cxx
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -MMD $<  -o $@
+	$(CXX) $(CXXFLAGS) $(INCLUDES) $(3RDINCLUDES) -I$(3RDDIRS) -c -MMD $<  -o $@
 %.o:%.cpp
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -MMD $<  -o $@
+	$(CXX) $(CXXFLAGS) $(INCLUDES) $(3RDINCLUDES) -I$(3RDDIRS) -c -MMD $<  -o $@
 %.o:%.cc
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -MMD $<  -o $@
+	$(CXX) $(CXXFLAGS) $(INCLUDES) $(3RDINCLUDES) -I$(3RDDIRS) -c -MMD $<  -o $@
 %.o:%.c
-	$(CC) $(CCFLAGS) $(INCLUDES) -c -MMD $<  -o $@ 
+	$(CC) $(CCFLAGS) $(INCLUDES) $(3RDINCLUDES) -I$(3RDDIRS) -c -MMD $<  -o $@ 
 .PHONY: clean
+
 clean:
-	del $(call FIXPATH,src/*.o)
-	del $(call FIXPATH,src/*.d)
-	del $(call FIXPATH,res/*.d)
-	del $(call FIXPATH,res/*.o)
-	del $(call FIXPATH,asm/*.d)
-	del $(call FIXPATH,asm/*.o)
-	del $(OUTPUTMAIN)
+# «Â¿ÌÀ˘”–◊”ƒø¬º
+	@echo "Checking CURRENT paths: $(CURRENT)"
+	@echo "Checking CURRENTPATH paths: $(CURRENTPATH)"
+	@echo "Checking 3RDS paths: $(3RDS)"
+ifeq ($(OS),Windows_NT)
+# @$(foreach dir, $(3RDS), $(MAKE) -C $(wildcard $(CURRENTPATH)$(dir)) clean )
+	@echo «Â¿Ìµ⁄»˝∑Ωø‚...
+	@echo ¥˝«Â¿Ìƒø¬º¡–±Ì£∫$(3RD_CLEAN_DIRS)
+	@for %%d in ($(3RD_CLEAN_DIRS)) do @( \
+		if exist "%%d" ( \
+			echo ’˝‘⁄«Â¿Ì %%d... & \
+			$(MAKE) -C "%%d" clean \
+		) else ( \
+			echo Ã¯π˝≤ª¥Ê‘⁄µƒƒø¬º: %%d \
+		) \
+	)
+	@echo «Â¿ÌœÓƒøŒƒº˛...
+	del /Q $(call FIXPATH,src\*.o) 2>nul
+	del /Q $(call FIXPATH,src\*.d) 2>nul
+	del /Q $(call FIXPATH,res\*.o) 2>nul
+	del /Q $(call FIXPATH,res\*.d) 2>nul
+	del /Q $(call FIXPATH,asm\*.o) 2>nul
+	del /Q $(call FIXPATH,asm\*.d) 2>nul
+	del /Q $(OUTPUTMAIN) 2>nul
+	@echo «Â¿ÌÕÍ≥…!
+else
+# @for dir in $(3RDS); do \
+# 	$(MAKE) -C $$dir clean; \
+# done
+	@for dir in $(3RDS); do \
+		$(MAKE) -C $$dir clean; \
+	done
+	@rm -f $(CXXOBJECTS) $(CPPOBJECTS) $(CCOBJECTS) $(COBJECTS) $(RCOBJECTS) $(ASMOBJECTS)
+	@rm -f $(OUTPUTMAIN)
+	@echo «Â¿ÌÕÍ≥…!
+endif
+# del $(call FIXPATH,src/*.o)
+# del $(call FIXPATH,src/*.d)
+# del $(call FIXPATH,res/*.d)
+# del $(call FIXPATH,res/*.o)
+# del $(call FIXPATH,asm/*.d)
+# del $(call FIXPATH,asm/*.o)
+# del $(OUTPUTMAIN)
 	@echo Cleanup complete!
 run: all
 	./$(OUTPUTMAIN)
@@ -138,17 +223,17 @@ run: all
 #	ar -rcs libmain.a *.o
 
 #------------------------------ plan c --------------------------------------------------
-# ## Â∑•ÂÖ∑ÈìæÂÆö‰πâ
+# ## π§æﬂ¡¥∂®“Â
 # CC      = gcc
 # CXX     = g++
 # WINDRES = windres
 # AS      = nasm
 # RM      = rm -f
-# ## ÁõÆÊ†áÈÖçÁΩÆ
+# ## ƒø±Í≈‰÷√
 # TARGET  = app.exe
 # MODE    = exe               # exe/lib/dll
-# ARCH    = x86_64            # ÂèØÊîπ‰∏∫ i386
-# ## ÁõÆÂΩïÈÖçÁΩÆ
+# ARCH    = x86_64            # ø…∏ƒŒ™ i386
+# ## ƒø¬º≈‰÷√
 # SRC_DIR = src
 # ASM_DIR = asm
 # RC_DIR  = res
@@ -158,21 +243,21 @@ run: all
 # BIN_DIR = output
 # INCLUDES	:= $(patsubst %,-I%, $(INC_DIR:%/=%))
 # LIBS		:= $(patsubst %,-L%, $(LIB_DIR:%/=%))
-# ## Êñá‰ª∂ÊêúÁ¥¢
+# ## Œƒº˛À—À˜
 # C_SRCS   = $(wildcard $(patsubst %,%/*.c, $(SRC_DIR)))
 # CPP_SRCS = $(wildcard $(patsubst %,%/*.cpp, $(SRC_DIR)))
 # ## CXX_SRCS = $(wildcard $(patsubst %,%/*.cxx, $(SRC_DIR)))
 # ## CC_SRCS = $(wildcard $(patsubst %,%/*.cc, $(SRC_DIR)))
 # ASM_SRCS = $(wildcard $(ASM_DIR)/*.asm)
 # RC_SRCS  = $(wildcard $(RC_DIR)/*.rc)
-# ## ÂØπË±°Êñá‰ª∂ËΩ¨Êç¢
+# ## ∂‘œÛŒƒº˛◊™ªª
 # C_OBJS   = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(C_SRCS))
 # CPP_OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(CPP_SRCS))
 # ## CXX_OBJS = $(patsubst $(SRC_DIR)/%.cxx, $(OBJ_DIR)/%.o, $(CPP_SRCS))
 # ## CC_OBJS = $(patsubst $(SRC_DIR)/%.cc, $(OBJ_DIR)/%.o, $(CPP_SRCS))
 # ASM_OBJS = $(patsubst $(ASM_DIR)/%.asm, $(OBJ_DIR)/%.o, $(ASM_SRCS))
 # RC_OBJS  = $(patsubst $(RC_DIR)/%.rc, $(OBJ_DIR)/%.o, $(RC_SRCS))
-# ## ÁºñËØëÈÄâÈ°π
+# ## ±‡“Î—°œÓ
 # ##CFLAGS   = -Wall -O2 -I$(INC_DIR) -m$(ARCH)
 # ##CXXFLAGS = $(CFLAGS) -std=c++11
 # CXXFLAGS	:= -I$(INC_DIR),$(RC_DIR) -std=c++14 -w -O3 -g -static -DWIN32 -D_WIN32 -D__WIN32__ -D_WINDOWS -DWINDOWS -D__WINDOWS__ -D_GLFW_WIN32 -DNANOVG_GLEW -DGLEW_STATIC -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -DLUA_COMPAT -DLUA_COMPAT_ALL -DLUA_COMPAT_5_3 -DLUA_COMPAT_5_2  -DFT2_BUILD_LIBRARY -DFT_CONFIG_OPTION_SYSTEM_ZLIB -DBUILDING_LIBCURL -DCURL_HIDDEN_SYMBOLS -DHAVE_CURL_CONFIG_H -DCURL_STATICLIB -DSFML_STATIC -DAL_BUILD_LIBRARY -DAL_LIBTYPE_STATIC -DAL_ALEXT_PROTOTYPES -DFLAC__CPU_X86_64 -DFLAC__HAS_X86INTRIN -DFLAC__ALIGN_MALLOC_DATA -DFLAC__NO_DLL -DFLAC__OVERFLOW_DETECT -DFLAC__HAS_OGG -DFLAC__ENABLE_64_BIT_WORDS  -DLOAD_PNG -DLOAD_JPG -DLOAD_WEBP -DLOAD_GIF -DOGG_MUSIC -DMUSIC_MID_TIMIDITY -DMUSIC_MID_NATIVE -DMUSIC_OGG -DMUSIC_OPUS -DMUSIC_FLAC -DOPUS_CUSTOM_NOSTATIC -DOPUS_BUILD -DVAR_ARRAYS -DFPM_DEFAULT -DFIXED_POINT -DWIN32_LEAN_AND_MEAN             
@@ -184,36 +269,36 @@ run: all
 # # ## LFLAGS = -Wl,--subsystem,console -municode -mconsole -fexec-charset=gbk -finput-charset=gbk -lkernel32 -limm32 -lversion -luser32 -lwinspool -lodbc32 -lodbccp32 -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid  -lwinmm -lmingw32 -lMsimg32 -lopengl32 -lglu32 -lgdi32 -lgdiplus -ld3d9 -ddxguid -dd3d11 -lshlwapi -lWs2_32 -lIphlpapi 
 # # ## LFLAGS = -Wl,--subsystem,windows -municode -mwindows -lkernel32 -limm32 -lversion -luser32 -lwinspool -lodbc32 -lodbccp32 -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid  -lwinmm -lmingw32 -lMsimg32 -lopengl32 -lglu32 -lgdi32 -lgdiplus -ld3d9 -ddxguid -dd3d11 -lshlwapi -lWs2_32 -lIphlpapi
 # # ## LFLAGS = -Wl,--subsystem,console -municode -mconsole -lkernel32 -limm32 -lversion -luser32 -lwinspool -lodbc32 -lodbccp32 -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid  -lwinmm -lmingw32 -lMsimg32 -lopengl32 -lglu32 -lgdi32 -lgdiplus -ld3d9 -ddxguid -dd3d11 -lshlwapi -lWs2_32 -lIphlpapi
-# ASFLAGS  = -f elf64          # NASM Ê†ºÂºèÔºà64‰ΩçÔºâ
+# ASFLAGS  = -f elf64          # NASM ∏Ò Ω£®64Œª£©
 # RCFLAGS  = -O coff --use-temp-file -F pe-$(ARCH)
 # LIBS     = -lkernel32 -limm32 -lversion -luser32 -lwinspool -lodbc32 -lodbccp32 -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid  -lwinmm -lmingw32 -lMsimg32 -lopengl32 -lglu32 -lgdi32 -lgdiplus -ld3d9 -ldxguid -ld3d11 -lxinput -ldinput8 -ld2d1 -ldwrite -lwindowscodecs -lshlwapi -lWs2_32 -lIphlpapi -lcomctl32 -lpthread -ldsound -lddraw -lm -lbcrypt -lsetupapi -lsecur32 -lcrypt32  -lpsapi -luserenv
-# ## ‰∏ªËßÑÂàô
+# ## ÷˜πÊ‘Ú
 # all: setup $(BIN_DIR)/$(TARGET)
-# ## ÈìæÊé•ÊâÄÊúâÂØπË±°Êñá‰ª∂ $(CXX_OBJS) $(CC_OBJS)
+# ## ¡¥Ω”À˘”–∂‘œÛŒƒº˛ $(CXX_OBJS) $(CC_OBJS)
 # $(BIN_DIR)/$(TARGET): $(C_OBJS) $(CPP_OBJS) $(ASM_OBJS) $(RC_OBJS)
 # 	$(CXX) $^ -o $@ $(LDFLAGS) $(LIBS)
-# ## C Êñá‰ª∂ÁºñËØë
+# ## C Œƒº˛±‡“Î
 # $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 # 	$(CC) $(CFLAGS) $(INCLUDES) -c -MMD $< -o $@
-# ## C++ Êñá‰ª∂ÁºñËØë
+# ## C++ Œƒº˛±‡“Î
 # $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 # 	$(CXX) $(CXXFLAGS) -c -MMD $< -o $@
-# # ## CXX Êñá‰ª∂ÁºñËØë
+# # ## CXX Œƒº˛±‡“Î
 # # $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cxx
 # # 	$(CXX) $(CXXFLAGS) -c -MMD $< -o $@
-# # ## CC Êñá‰ª∂ÁºñËØë
+# # ## CC Œƒº˛±‡“Î
 # # $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cc
 # # 	$(CXX) $(CXXFLAGS) -c -MMD $< -o $@
-# ## ASM Êñá‰ª∂ÁºñËØë
+# ## ASM Œƒº˛±‡“Î
 # $(OBJ_DIR)/%.o: $(ASM_DIR)/%.asm
 # 	$(AS) $(ASFLAGS) $< -o $@
-# ## RC Êñá‰ª∂ÁºñËØë
+# ## RC Œƒº˛±‡“Î
 # $(OBJ_DIR)/%.o: $(RC_DIR)/%.rc
 # 	$(WINDRES) $(RCFLAGS) $< $@
-# ## ÂàõÂª∫ÁõÆÂΩïÁªìÊûÑ
+# ## ¥¥Ω®ƒø¬ºΩ·ππ
 # setup:
 # 	@mkdir -p $(OBJ_DIR) $(BIN_DIR)
-# ## Ê∏ÖÁêÜ
+# ## «Â¿Ì
 # clean:
 # 	$(RM) $(BIN_DIR)/$(TARGET) $(OBJ_DIR)/*.o
 # .PHONY: all setup clean
